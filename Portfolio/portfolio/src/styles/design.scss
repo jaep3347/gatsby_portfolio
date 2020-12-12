@@ -1,0 +1,29 @@
+.design-wrapper {
+  width: 80vw;
+  margin-top: 10vh;
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+ 
+  h1 {
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 20px;
+  }
+  .grid {
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    @include media(">=phone", "<lgphone") {
+      grid-template-columns: 1fr;
+    }
+    @include media(">=lgphone", "<tablet") {
+      grid-template-columns: 1fr;
+    }
+    @include media(">=tablet", "<desktop") {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
